@@ -32,7 +32,7 @@ public class BeerControllerTests {
     public void should_give_me_a_beer_when_im_old_enough() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/beers")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(Json.write(new AskForBeerRequest("Quadros",18,"Heineken"), AskForBeerRequest.class)))
+            .content(Json.write(new AskForBeerRequest("Bathu",18,"Heineken"), AskForBeerRequest.class)))
             .andExpect(MockMvcResultMatchers.status().isOk())
             .andExpect(MockMvcResultMatchers.content().string("Yeah, There you go!"));
 
@@ -42,7 +42,7 @@ public class BeerControllerTests {
     public void should_reject_a_beer_when_im_too_young() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.post("/beers")
         .contentType(MediaType.APPLICATION_JSON)
-        .content(Json.write(new AskForBeerRequest("Quadros",17,"Heineken"), AskForBeerRequest.class)))
+        .content(Json.write(new AskForBeerRequest("Bathu",17,"Heineken"), AskForBeerRequest.class)))
         .andExpect(MockMvcResultMatchers.status().isOk())
         .andExpect(MockMvcResultMatchers.content().string("Oh No, Get Lost!"));
     }

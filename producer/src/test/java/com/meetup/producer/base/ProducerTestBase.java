@@ -15,4 +15,5 @@ public abstract class ProducerTestBase {
     public void setup() {
         RestAssuredMockMvc.standaloneSetup(new ProducerController());
     }
+
 }

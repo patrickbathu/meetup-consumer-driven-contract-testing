@@ -5,7 +5,7 @@ org.springframework.cloud.contract.spec.Contract.make {
         method("POST")
         url("/check")
         body([
-                "name": "Quadros",
+                "name": "Bathu",
                 "age": regex("[0-1][0-7]")
         ])
         headers {

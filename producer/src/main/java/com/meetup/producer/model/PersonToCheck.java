@@ -1,10 +1,10 @@
 package com.meetup.producer.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Data
+@Builder
+@ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class PersonToCheck {
